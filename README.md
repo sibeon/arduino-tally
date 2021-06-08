@@ -1,0 +1,35 @@
+
+ATEM Tally HUB
+=
+
+This Project is an Arduino Project that provides three programms for ATEM Tally lights.
+
+* UDPTally
+* UDPTallyHub
+* UDPTallyHubClient
+
+## UDPTally
+
+This is the Client program for the Tally UDP protocol.
+
+## UDPTallyHub
+
+This program is a standalone HUB that dustributes the channel states of an ATEM Switcher
+
+## UDPTallyHubClient
+
+This is a combination of the HUB and the client. The defined channel of this Tally will be handled by itself and not distributed.
+
+# Protocol
+
+the Tally HUB is sending a message like:
+ 
+ TALLY$CHANNEL$|$STATE$
+
+### STATE
+    0 ... OFF
+    1 ... PREVIEW
+    2 ... PROGRAM
+
+Example: 
+TALLY1|1
