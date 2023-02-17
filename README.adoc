@@ -34,3 +34,18 @@ TALLY$CHANNEL$|$STATE$
 
 Example:
 TALLY1|1
+
+[mermaid,target=diagram-classes,format=png]
+....
+stateDiagram-v2
+    [*] --> 0
+    0: 0 ... OFF
+    1: 1 ... PREVIEW
+    2: 2 ... PROGRAM
+    0 --> 1
+    0 --> 2
+    1 --> 2
+    2 --> 1
+    1 --> [*]
+    2 --> [*]
+....
